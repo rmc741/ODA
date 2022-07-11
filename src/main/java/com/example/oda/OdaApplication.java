@@ -9,6 +9,4 @@ public class OdaApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(OdaApplication.class, args);
 	}
-
-
 }

@@ -44,7 +44,5 @@ public class ProjectService {
         Project project = buscarProjeto(projectId);
 
         projectRepositoy.delete(project);
-
-
     }
 }
