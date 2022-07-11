@@ -13,5 +13,6 @@ public class ResourceExceptionHandler {
         ErrorDTO errorDTO = new ErrorDTO(System.currentTimeMillis(), HttpStatus.NOT_FOUND.value(), e.getMessage());
 
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(errorDTO);
+
     }
 }

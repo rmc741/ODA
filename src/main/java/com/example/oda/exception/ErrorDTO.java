@@ -12,6 +12,7 @@ import java.io.Serializable;
 @Getter @Setter
 public class ErrorDTO implements Serializable {
 
+
     public static final long serialVersionUID = 1L;
 
     private Long timestamp;

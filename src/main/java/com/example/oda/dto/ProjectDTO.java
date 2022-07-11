@@ -17,6 +17,7 @@ public class ProjectDTO {
         this.id = project.getId();
         this.nomeProject = project.getNomeProjeto();
         this.descricaoProject = project.getDescricaoProjeto();
+
     }
 
 

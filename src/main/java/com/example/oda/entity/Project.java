@@ -25,5 +25,7 @@ public class Project {
     public Project(String nomeProjeto, String descricaoProjeto) {
         this.nomeProjeto = nomeProjeto;
         this.descricaoProjeto = descricaoProjeto;
+
+
     }
 }

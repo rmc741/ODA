@@ -23,6 +23,8 @@ public class ProjectResource {
                 .map(obj -> new ProjectDTO(obj)).collect(Collectors.toList());
 
         return ResponseEntity.ok().body(empresaDTOList);
+
+
     }
 
 }

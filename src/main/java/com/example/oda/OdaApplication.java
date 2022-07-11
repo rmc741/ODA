@@ -10,4 +10,5 @@ public class OdaApplication {
 		SpringApplication.run(OdaApplication.class, args);
 	}
 
+
 }
