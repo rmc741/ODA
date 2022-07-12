@@ -14,7 +14,6 @@ import javax.persistence.*;
 public class Project {
 
     @Id
-    @Setter(AccessLevel.NONE)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name = "project_name")
