@@ -27,12 +27,25 @@ public class ProjectResource {
         return ResponseEntity.ok().body(empresaDTOList);
     }
 
+    @GetMapping("{projectId}")
+    public ResponseEntity<ProjectDTO> findById(@PathVariable final Long projectId){
+        ProjectDTO projectDTO = new ProjectDTO(projectService.buscarProjeto(projectId));
+
+        return ResponseEntity.ok().body(projectDTO);
+    }
+
     @PostMapping()
     public ResponseEntity<ProjectDTO> newProject(@RequestBody final ProjectDTO projectDTO){
         Project project = projectService.inserir(projectDTO);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}").buildAndExpand(project.getId()).toUri();
         return ResponseEntity.created(uri).build();
+    }
+
+    @PutMapping("{projectId}")
+    public ResponseEntity<ProjectDTO> updateProject(@PathVariable final Long projectId, @RequestBody final ProjectDTO projectDTO){
+        ProjectDTO updateProject = new ProjectDTO(projectService.atualizarDados(projectId, projectDTO));
+        return ResponseEntity.ok().body(updateProject);
     }
 
     @DeleteMapping("{Id}")
